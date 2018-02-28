@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Enter a Name :</p>
+<input id="id1" type="string" min="11">
+
+<button onclick="myFunction()">OK</button>
+<p>Enter a address :</p>
+
+<input id="id1" type="double" min="100">
+<button onclick="myFunction()">OK</button>
+<p>Enter a g-mail :</p>
+<input id="id1" type="double" min="11">
+
+<button onclick="myFunction()">OK</button>
+<p>Enter a age and click ok:</p>
+<input id="id1" type="int" min="11">
+
+<button onclick="myFunction()">OK</button>
+
+<p>Enter a phone-number and click OK:</p>
+
+<input id="id1" type="number" max="11 digit">
+<button onclick="myFunction()">OK</button>
+
+<p>If the number is greater than 11 digit (the input's min attribute), an error message will be displayed.</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var txt = "";
+    if (document.getElementById("id1").validity.rangeUnderflow) {
+        txt = "Value too small";
+    } else {
+        txt = "Input OK";
+    } 
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
+
